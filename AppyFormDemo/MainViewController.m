@@ -8,6 +8,7 @@
 
 
 #import "MainViewController.h"
+#import "FeedbackViewController.h"
 
 @interface MainViewController ()
 
@@ -44,7 +45,7 @@
     textLabel.textColor = [UIColor whiteColor];
     textLabel.preferredMaxLayoutWidth = 270.0;
     textLabel.numberOfLines = 0;
-    textLabel.text = @"Hi there! This app demonstrates how you can display a feedback form by tapping on a UIButton or tab menu item.";
+    textLabel.text = @"This app demonstrates how a feedback form can be displayed using UINavigationViewController.";
     [self.view addSubview: textLabel];
 
     UIButton *feedbackButton = [UIButton buttonWithType: UIButtonTypeSystem];
@@ -59,9 +60,10 @@
              forControlEvents:UIControlEventTouchUpInside
      ];
 
+    
 
     NSArray *allConstraints = @[
-                                // Set title background to be on top.
+                                // Set title background (white patch) to be on top.
                                 [NSLayoutConstraint constraintWithItem: titleBgView
                                                              attribute: NSLayoutAttributeTop
                                                              relatedBy: NSLayoutRelationEqual
@@ -76,7 +78,7 @@
                                                                 toItem: self.view
                                                              attribute: NSLayoutAttributeTop
                                                             multiplier: 1.0
-                                                              constant: 80
+                                                              constant: 140
                                  ],
                                 [NSLayoutConstraint constraintWithItem: titleBgView
                                                              attribute: NSLayoutAttributeLeft
@@ -108,7 +110,7 @@
                                                              relatedBy: NSLayoutRelationEqual
                                                                 toItem: titleBgView
                                                              attribute: NSLayoutAttributeCenterY
-                                                            multiplier: 1.2
+                                                            multiplier: 1.5
                                                               constant: 0
                                  ],
                                 // Set label position.
@@ -152,6 +154,10 @@
 
 -(void)buttonCallback:(UIButton *)button forEvent:(UIEvent*)event {
     NSLog(@"Event sent");
+
+    FeedbackViewController *feedbackVC = [[FeedbackViewController alloc] init];
+    feedbackVC.title = @"Feedback";
+    [self.navigationController pushViewController:feedbackVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
