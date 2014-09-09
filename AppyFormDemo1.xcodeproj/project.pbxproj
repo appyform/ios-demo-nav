@@ -34,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ABD8D86119BEC44A0060E08A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		ABF00FDD19A217A00017DFA2 /* AppyFormDemo1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppyFormDemo1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF00FE019A217A00017DFA2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ABF00FE219A217A00017DFA2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,6 +84,7 @@
 		ABF00FD419A217A00017DFA2 = {
 			isa = PBXGroup;
 			children = (
+				ABD8D86119BEC44A0060E08A /* README.md */,
 				ABF00FE619A217A00017DFA2 /* AppyFormDemo */,
 				ABF00FFF19A217A00017DFA2 /* AppyFormDemoTests */,
 				ABF00FDF19A217A00017DFA2 /* Frameworks */,
